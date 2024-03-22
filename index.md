@@ -1,2 +1,1 @@
-Hello World
-^^^^^^^^^^^
+Check out the [documentation](https://docs.shoopdaloop.com)
