@@ -1,3 +1,7 @@
 theme: jekyll-theme-slate
 title: ShoopDaLoop
 description: Live looping with DAW elements
+
+github:
+  repository_url: https://github.com/SanderVocke/shoopdaloop
+  owner_name: Sander Vocke
