@@ -11,8 +11,8 @@
 # -----------------
 en: &DEFAULT_EN
   header:
-    title: ShoopDaLoop
-    text: Live looping with DAW elements
+    title: live looping with DAW elements
+    text: ShoopDaLoop
     button: Tell Me More
     buttonlink: "#services"
 
