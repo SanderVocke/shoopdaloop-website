@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0px;
 }
 
+img {
+  border: none;
+  -webkit-box-shadow: none;
+}
+
 #project_title {
   font-weight: 400;
   font-size: 30px;
@@ -46,4 +51,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: perspective(1000px) rotateY(-20deg);
   margin-left: 80px;
   margin-top: 40px;
+  border: 1px solid #ebebeb;
+  -webkit-box-shadow: 0 0 5px #ebebeb;
 };

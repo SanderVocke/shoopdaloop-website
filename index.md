@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# <img src="assets/img/person-digging-solid.svg" width="50"> Under Construction
+# <img src="assets/img/person-digging-solid.svg" width="50" style="vertical-align: bottom"> Under Construction
 
 ShoopDaLoop is a cross-platform, FOSS advanced live looping application that is unfortunately not yet finished.
 
