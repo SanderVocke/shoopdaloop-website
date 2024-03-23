@@ -4,4 +4,4 @@ This repository contains the live version of the [public website](https://sander
 
 The website code is public, because why not?
 
-The basic idea it Github Pages' own Slate theme, with some minor modifications to the template and styling.
+The basic idea is to use Github Pages' own Slate theme, with some minor modifications to the template and styling.
