@@ -13,17 +13,29 @@ en: &DEFAULT_EN
   header:
     title: live looping with DAW elements
     text: ShoopDaLoop
-    button: Tell Me More
-    buttonlink: "#concept"
+    button: "What's coming?"
+    buttonlink: "#landing"
 
-  concept:
-    title: "Concept"
-    text: "TBD"
-    section: concept
-    list:
-      - title: "Placeholder"
-        desc:  "lorem ipsum"
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
+  about:
+    title: "Under Construction"
+    text: ""
+    section: landing
+  #   title: "About Us"
+  #   text: "our story"
+  #   body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+  #   section: about
+
+  # services:
+  #   title: "Use it for"
+  #   text: ""
+  #   section: usefor
+  #   list:
+  #     - title: "Jamming"
+  #       desc:  "Solo or together. Looping is fun!"
+  #       icon: fas fa-guitar #find more at https://fontawesome.com/icons
+  #     - title: "Writing"
+  #       desc:  "Keep the beat going while you explore musical ideas."
+  #       icon: fas fa-feather #find more at https://fontawesome.com/icons
 
   # services:
   #   title: "Services"
