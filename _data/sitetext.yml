@@ -18,11 +18,12 @@ en: &DEFAULT_EN
 
   concept:
     title: "Concept"
-    test: "TBD"
+    text: "TBD"
     section: concept
     list:
       - title: "Placeholder"
         desc:  "lorem ipsum"
+        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
 
   services:
     title: "Services"
