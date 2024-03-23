@@ -1,7 +1,8 @@
 theme: jekyll-theme-slate
 title: ShoopDaLoop
-description: Limitless live looping
+description: limitless live looping
 logo: /assets/img/logo.png
+screenshot: /assets/img/screenshot.png
 
 github:
   repository_url: https://github.com/SanderVocke/shoopdaloop

@@ -17,11 +17,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #project_title {
   font-weight: 400;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 #project_tagline {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 0px;
 }
 
 #forkme_banner {
@@ -35,5 +36,14 @@ h1, h2, h3, h4, h5, h6 {
   src: url("{{ site.logo }}");
   border: none;
   -webkit-box-shadow: none;
-  width: 300px;
+  width: 200px;
 }
+
+#header_screenshot {
+  // apply a cool perspective transform that makes the screenshot look
+  // as though it was viewed from an angle
+  width: 300px;
+  transform: perspective(1000px) rotateY(-20deg);
+  margin-left: 80px;
+  margin-top: 40px;
+};
