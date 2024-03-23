@@ -1,1 +1,3 @@
-Check out the [documentation](https://docs.shoopdaloop.com)
+---
+layout: home
+---
