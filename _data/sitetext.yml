@@ -16,6 +16,14 @@ en: &DEFAULT_EN
     button: Tell Me More
     buttonlink: "#services"
 
+  concept:
+    title: "Concept"
+    test: "TBD"
+    section: concept
+    list:
+      - title: "Placeholder"
+        desc:  "lorem ipsum"
+
   services:
     title: "Services"
     text: "Lorem ipsum"
