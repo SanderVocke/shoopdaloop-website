@@ -10,6 +10,6 @@ However, development is out in the open and there is a lot that already works. F
 
 Curious? Have a look or grab an early build at [the project GitHub](https://github.com/SanderVocke/shoopdaloop) and/or have a look at the [documentation](https://docs.shoopdaloop.com).
 
-I am looking forward to your thoughts, ideas and bug reports.
+I am looking forward to your [thoughts, ideas, demos](https://github.com/SanderVocke/shoopdaloop/discussions) and [bug reports](https://github.com/SanderVocke/shoopdaloop/issues).
 
 Happy looping!
