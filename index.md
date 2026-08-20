@@ -8,7 +8,7 @@ ShoopDaLoop is a cross-platform, FOSS advanced live looping application that is 
 
 Development is out in the open and there is a lot that already works as it moves closer to a 1.0.0 release.
 
-Curious? You can try it out right in your browser with the [latest web dev version](https://github.com/SanderVocke/shoopdaloop/releases/download/dev-web/shoopdaloop-web-wasm32-release.html)! Note that for optimal real-time performance and plugin loading, you will need to grab [the latest release](https://github.com/SanderVocke/shoopdaloop/releases/latest) for desktop.
+Curious? You can try it out right in your browser with the [latest web dev version]({{ '/app/' | relative_url }})! Note that for optimal real-time performance and plugin loading, you will need to grab [the latest release](https://github.com/SanderVocke/shoopdaloop/releases/latest) for desktop.
 
 You can also have a look at the [documentation](https://sandervocke.github.io/shoopdaloop) or [source code](https://github.com/SanderVocke/shoopdaloop).
 
