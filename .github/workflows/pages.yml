@@ -48,6 +48,7 @@ jobs:
 
           test "$(wc -c < "$download")" -gt 1024
           head -c 1024 "$download" | grep --ignore-case --quiet '<!doctype html'
+          chmod 0644 "$download"
           mv "$download" app/index.html
 
       - name: Configure GitHub Pages
