@@ -8,6 +8,11 @@ on:
     # Refresh the web build once a day. Times are UTC.
     - cron: "17 03 * * *"
   workflow_dispatch:
+    inputs:
+      source_sha:
+        description: ShoopDaLoop commit published to the rolling web release
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -19,7 +24,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  WEB_RELEASE_URL: https://github.com/SanderVocke/shoopdaloop/releases/download/dev-web/shoopdaloop-web-wasm32-release.html
+  WEB_RELEASE_URL: https://github.com/SanderVocke/shoopdaloop/releases/download/dev-web/shoopdaloop-web-wasm32-development-preview.html
 
 jobs:
   build:
@@ -30,8 +35,13 @@ jobs:
 
       - name: Download latest web build
         shell: bash
+        env:
+          SOURCE_SHA: ${{ inputs.source_sha }}
         run: |
           set -euo pipefail
+          if [[ -n "$SOURCE_SHA" ]]; then
+            echo "Downloading web preview published from ShoopDaLoop commit $SOURCE_SHA"
+          fi
           mkdir -p app
           download="$(mktemp)"
           trap 'rm -f "$download"' EXIT
