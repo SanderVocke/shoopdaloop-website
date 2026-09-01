@@ -1,0 +1,88 @@
+name: Build and deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - gh-pages
+  schedule:
+    # Refresh the web build once a day. Times are UTC.
+    - cron: "17 03 * * *"
+  workflow_dispatch:
+    inputs:
+      source_sha:
+        description: ShoopDaLoop commit published to the rolling web release
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  WEB_RELEASE_URL: https://github.com/SanderVocke/shoopdaloop/releases/download/dev-web/shoopdaloop-web-wasm32-development-preview.html
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download latest web build
+        shell: bash
+        env:
+          SOURCE_SHA: ${{ inputs.source_sha }}
+        run: |
+          set -euo pipefail
+          if [[ -n "$SOURCE_SHA" ]]; then
+            echo "Downloading web preview published from ShoopDaLoop commit $SOURCE_SHA"
+          fi
+          mkdir -p app
+          download="$(mktemp)"
+          trap 'rm -f "$download"' EXIT
+
+          curl \
+            --fail \
+            --location \
+            --retry 3 \
+            --retry-all-errors \
+            --silent \
+            --show-error \
+            --output "$download" \
+            "$WEB_RELEASE_URL"
+
+          test "$(wc -c < "$download")" -gt 1024
+          head -c 1024 "$download" | grep --ignore-case --quiet '<!doctype html'
+          chmod 0644 "$download"
+          mv "$download" app/index.html
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
